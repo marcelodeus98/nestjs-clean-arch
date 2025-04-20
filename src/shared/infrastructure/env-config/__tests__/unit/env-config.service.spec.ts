@@ -17,4 +17,12 @@ describe('EnvConfigService', () => {
   it('should be defined', () => {
     expect(sut).toBeDefined();
   });
+
+  it('should return NODE_ENV', () => {
+    expect(sut.getNodeEnv()).toBe('test');
+  });
+
+  it('should return PORT', () => {
+    expect(sut.getAppPort()).toBe(3000);
+  });
 });
