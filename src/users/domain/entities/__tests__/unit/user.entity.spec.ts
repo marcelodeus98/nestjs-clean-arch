@@ -40,4 +40,28 @@ describe('UserEntity unit tests', () => {
     expect(sut.createdAt).toBeDefined();
     expect(sut.createdAt).toBeInstanceOf(Date);
   });
+
+  it('Setter method name', () => {
+    const name = faker.person.fullName();
+    sut.updateName(name);
+    expect(sut.name).toBe(name);
+  });
+
+  it('Setter method password', () => {
+    const password = faker.internet.password();
+    sut.updatePassword(password);
+    expect(sut.password).toBe(password);
+  });
+
+  it('UpdateName method', () => {
+    const name = faker.person.fullName();
+    sut.updateName(name);
+    expect(sut.name).toBe(name);
+  });
+
+  it('UpdatePassword method', () => {
+    const password = faker.internet.password();
+    sut.updatePassword(password);
+    expect(sut.password).toBe(password);
+  });
 });
